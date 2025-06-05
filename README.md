@@ -15,7 +15,7 @@ Ce projet utilise l'architecture "Features // Pages // Steps" écrit en TypeScri
 ## Prérequis
 
 - Appium `>=2.5`
-- NodeJS `>=20`
+- NodeJS `Latest LTS v22.16.0`
 - Android Studio `Latest version`
 - Emulateur `Android 15.0`
 - Appium Inspector
