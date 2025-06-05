@@ -2,6 +2,45 @@
 
 ---
 
+## 🔹 Soumission du travail
+
+Pour soumettre votre travail :
+
+- Forkez ce projet sur un repository privé
+- Ajoutez les reviewers de l'équipe à votre repository
+- Soumettez votre travail sous forme de Pull Request
+
+---
+
+## 🔹 Critères d'évaluation
+
+Votre code sera évalué sur les aspects suivants :
+
+### Structure du code
+- Organisation claire et logique des fichiers et dossiers
+- Respect de l'architecture Page Object Model
+- Respect des bonnes pratiques de nommage
+- Lisibilité et maintenabilité du code
+- Création de fonctions/méthodes réutilisables
+
+### Clarté et lisibilité de la PR
+- Organisation logique des commits
+- Messages de commit descriptifs et concis
+- Documentation claire des changements effectués
+
+---
+
+## 🔹 Entretien de debrief
+
+Lors de l'entretien de debrief, vous devrez :
+
+- Expliquer vos choix techniques et d'organisation (Feature, steps definition, etc.)
+- Expliquer le fonctionnement des tests que vous avez implémentés
+- Faire une démonstration en lançant le projet
+- Proposer des pistes d'amélioration pour le framework de test
+
+---
+
 ## 🔹 Exercice 1 : Vérifications à l’ouverture de l’application
 
 À l’ouverture de l'application, certains éléments doivent impérativement être présents afin d'assurer son bon fonctionnement.
