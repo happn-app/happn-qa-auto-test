@@ -20,7 +20,7 @@ module.exports = {
         sourceType: 'module',
     },
     rules: {
-        semi: ['error', 'always'],
+        semi: ['error', 'never'],
         indent: [2, 4],
 
         'no-multiple-empty-lines': [2, { 'max': 1, 'maxEOF': 1 }],

@@ -7,6 +7,7 @@
     },
     "type": "module",
     "scripts": {
+        "appium": "npx appium --port 4723",
         "android": "wdio run config/android.conf.ts"
     },
     "devDependencies": {

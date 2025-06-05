@@ -28,11 +28,17 @@ npm install
 
 ## Run
 
+- Dans un premier terminal, démarrez le serveur appium :
+```sh
+npm run appium
+```
+
+- Dans un second terminal, vous pourrez exécuter les tests automatisés :
 ```sh
 npm run android
 ```
 
-## Android - Appium inspector capabilities
+## Appium inspector - Android capabilities
 
 - L'application demo à utiliser est disponible dans le dossier `apps` 
 
