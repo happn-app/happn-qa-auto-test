@@ -10,6 +10,14 @@ Pour soumettre votre travail :
 - Ajoutez les reviewers de l'équipe à votre repository
 - Soumettez votre travail sous forme de Pull Request
 
+## 🔹 Liste reviewers de l'équipe
+- @cyrillrx
+- @GBeauny
+- @SebastienGadalla
+- @ignacio-e
+- @tcomparini
+- @AlisonJardon
+
 ---
 
 ## 🔹 Critères d'évaluation
