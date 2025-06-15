@@ -52,7 +52,7 @@ export const config: WebdriverIO.Config = {
             'appium:deviceName': 'emulator-5554',
             //
             // NOTE: Change this version according to the Simulator Version you have created on your local machine
-            'appium:platformVersion': '15.0',
+            'appium:platformVersion': '16',
             'appium:orientation': 'PORTRAIT',
             'appium:automationName': 'UiAutomator2',
             'appium:appPackage': 'com.wdiodemoapp',
