@@ -13,6 +13,6 @@ Then('The description {string} is displayed', async function(description: string
     await SwipePage.assertDescription();
 });
 
-Then('I see the carousel with 6 elements', async function() {
-    await SwipePage.assertCarousel();
+Then('I see the carousel with {int} elements', async function(count) {
+    await SwipePage.assertCarousel(count);
 }); 

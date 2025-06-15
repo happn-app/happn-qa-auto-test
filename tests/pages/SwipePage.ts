@@ -1,6 +1,7 @@
 import { $, expect } from '@wdio/globals';
 import { Page } from './page.js';
 
+
 class SwipePage extends Page {
    
     private get title() {
@@ -38,12 +39,56 @@ class SwipePage extends Page {
         const descText = await descElement.getText();
         await expect(descText).toBe('Or swipe vertical to find what I\'m hiding.');
     }
-    async assertCarousel() {
+    async assertCarousel(expectedCount = 6) {
         const carousel = await this.carousel;
         await expect(carousel).toBeDisplayed();
-        
-        const items = await this.carouselItems;
-        await expect(items).toHaveLength(6);
+        const titles = await this.getAllCarouselCardTitles(expectedCount);
+        expect(titles.size).toBe(expectedCount);
+    }
+
+
+
+    //swipe through the carousel cards and collect their titles
+    async getAllCarouselCardTitles(expectedCount = 6): Promise<Set<string>> {
+        const foundTitles = new Set<string>();
+        let swipeCount = 0;
+        const maxSwipes = 10;
+
+        while (foundTitles.size < expectedCount && swipeCount < maxSwipes) {
+            for (let i = 1; i <= 2; i++) {
+                const card = await $(`(//android.view.ViewGroup[@content-desc="card"])[${i}]`);
+                if (await card.isDisplayed()) {
+                    const titleElem = await card.$('android.widget.TextView');
+                    const title = await titleElem.getText();
+                    foundTitles.add(title);
+                }
+            }
+            if (foundTitles.size < expectedCount) {
+                const carousel = await this.carousel;
+                const location = await carousel.getLocation();
+                const size = await carousel.getSize();
+                
+                const startX = location.x + size.width * 0.8;
+                const endX = location.x + size.width * 0.2;
+                const y = location.y + size.height / 2;
+
+                await browser.performActions([{
+                    type: 'pointer',
+                    id: 'finger1',
+                    parameters: { pointerType: 'touch' },
+                    actions: [
+                        { type: 'pointerMove', duration: 0, x: startX, y: y },
+                        { type: 'pointerDown', button: 0 },
+                        { type: 'pause', duration: 100 },
+                        { type: 'pointerMove', duration: 600, x: endX, y: y },
+                        { type: 'pointerUp', button: 0 }
+                    ]
+                }]);
+                await browser.pause(600);
+                swipeCount++;
+            }
+        }
+        return foundTitles;
     }
 }
 
