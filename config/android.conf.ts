@@ -7,6 +7,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 export const config: WebdriverIO.Config = {
     port: 4723,
     path: '/',
+    maxInstances: 1,
     // ============
     // Specs
     // ============
