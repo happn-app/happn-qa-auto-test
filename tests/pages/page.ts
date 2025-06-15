@@ -1,4 +1,4 @@
-class Tabbar {
+export class Tabbar {
     get webdriver () { return $('~Webview') }
 
     async openWebdriver() {
@@ -6,7 +6,7 @@ class Tabbar {
     }
 }
 
-export default class Page {
+export class Page {
     tabbar = new Tabbar()
 
     async ensureExists(selectors: any[]): Promise<boolean> {
