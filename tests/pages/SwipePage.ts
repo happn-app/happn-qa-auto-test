@@ -46,8 +46,6 @@ class SwipePage extends Page {
         expect(titles.size).toBe(expectedCount);
     }
 
-
-
     //swipe through the carousel cards and collect their titles
     async getAllCarouselCardTitles(expectedCount = 6): Promise<Set<string>> {
         const foundTitles = new Set<string>();
@@ -89,6 +87,34 @@ class SwipePage extends Page {
             }
         }
         return foundTitles;
+    }
+
+    async assertEasterEgg() {
+        const easterEgg = await $('//android.widget.TextView[@text="You found me!!!"]');
+        await expect(easterEgg).toBeDisplayed();
+        const message = await easterEgg.getText();
+        await expect(message).toBe('You found me!!!');
+    }
+
+    async performVerticalSwipe() {
+        const { width, height } = await browser.getWindowSize();
+        const startY = height * 0.8;  // Start from bottom
+        const endY = height * 0.2;    // End at top
+        const x = width / 2;          // Center of screen
+
+        await browser.performActions([{
+            type: 'pointer',
+            id: 'finger1',
+            parameters: { pointerType: 'touch' },
+            actions: [
+                { type: 'pointerMove', duration: 0, x: x, y: startY },
+                { type: 'pointerDown', button: 0 },
+                { type: 'pause', duration: 100 },
+                { type: 'pointerMove', duration: 1000, x: x, y: endY },
+                { type: 'pointerUp', button: 0 }
+            ]
+        }]);
+        await browser.pause(2000); // Wait longer for the animation to complete
     }
 }
 
