@@ -2,8 +2,8 @@
     "compilerOptions": {
         "sourceMap": false,
         "target": "es2020",
-        "module": "NodeNext",
-        "moduleResolution": "Node16",
+        "module": "Node",
+        "moduleResolution": "Node",
         "removeComments": true,
         "noImplicitAny": true,
         "strictPropertyInitialization": true,

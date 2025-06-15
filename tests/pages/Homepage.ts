@@ -1,4 +1,3 @@
-import { Then } from '@cucumber/cucumber';
 import { $, expect } from '@wdio/globals';
 import { Page } from './page.js';
 

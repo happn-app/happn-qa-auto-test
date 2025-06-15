@@ -1,4 +1,4 @@
-class Tabbar {
+export class Tabbar {
     get webdriver () { return $('~Webview') }
 
     async openWebdriver() {
