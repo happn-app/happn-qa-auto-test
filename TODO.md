@@ -7,8 +7,9 @@
 Pour soumettre votre travail :
 
 - Forkez ce projet sur un repository privé
+- Créer une branche de developpement sur votre repository
 - Ajoutez les reviewers de l'équipe à votre repository
-- Soumettez votre travail sous forme de Pull Request
+- Soumettez votre travail sous forme de Pull Request sur votre repository avec la branche main
 
 ## 🔹 Liste reviewers de l'équipe
 - @cyrillrx
