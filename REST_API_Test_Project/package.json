@@ -1,0 +1,14 @@
+{
+  "name": "rest-api-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js --require steps/**/*.js",
+    "test:smoke": "cucumber-js --require steps/**/*.js --tags @SmokeTest"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "axios": "^1.10.0",
+    "chai": "^5.2.0"
+  }
+}
