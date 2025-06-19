@@ -49,3 +49,6 @@ tests/
 ```
 
 This structure helps ensure clean separation of test logic and UI structure.
+
+## Run the test
+npm test
