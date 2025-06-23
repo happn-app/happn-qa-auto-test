@@ -55,3 +55,6 @@ npm run android
 ## Test technique à réaliser
 
 - [TODO.md](TODO.md)
+
+## lancer les tests 
+npm test 
