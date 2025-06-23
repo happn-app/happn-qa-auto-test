@@ -10,7 +10,7 @@ async function launchApp() {
       'appium:deviceName': 'emulator-5554',
       'appium:platformVersion': '16',
       'appium:automationName': 'UiAutomator2',
-      'appium:app': '/Users/debdattadey/Desktop/test Happn/happn-qa-auto-test/apps/android.wdio.native.app.v1.0.8.apk',
+      'appium:app': path.resolve(__dirname, '../../apps/android.wdio.native.app.v1.0.8.apk')
       'appium:autoGrantPermissions': true,
     }
   });
