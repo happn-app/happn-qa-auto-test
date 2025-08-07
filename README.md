@@ -1,5 +1,5 @@
 
-# HAPPN - QA Automation Test
+# HAPPN - QA Automation - Entretien Technique
 Repository des tests automatisés
 Ce projet utilise l'architecture "Features // Pages // Steps" écrit en TypeScript et Gherkin.
 
